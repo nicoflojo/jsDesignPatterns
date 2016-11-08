@@ -1,0 +1,25 @@
+{
+  "name": "jsdesignpatterns",
+  "version": "1.0.0",
+  "description": "javascript design patterns ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicoflojo/jsDesignPatterns.git"
+  },
+  "keywords": [
+    "javascript",
+    "design",
+    "patterns",
+    "es5"
+  ],
+  "author": "Nico Flojo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicoflojo/jsDesignPatterns/issues"
+  },
+  "homepage": "https://github.com/nicoflojo/jsDesignPatterns#readme"
+}
