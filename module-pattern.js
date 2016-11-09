@@ -123,3 +123,22 @@ console.log(basketModule.basket);
 //undefined
 console.log(basket);
 // undefined
+
+// import mixin (jQuery, Underscore)
+
+// Global
+var myModule = (functtion (JQ, _ ) {
+  function privateMethod1() {
+    JQ(".container").html("test")
+  }
+  function privateMethod2() {
+    console.log(_.min([10, 5, 100, 2, 1000]));
+  }
+  return {
+    publicmethod: function() {
+      privateMethod1();
+    }
+  };
+}(jQuery, _));
+
+myModule.publicMethod();
