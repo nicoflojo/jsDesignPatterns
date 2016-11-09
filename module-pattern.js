@@ -142,3 +142,49 @@ var myModule = (functtion (JQ, _ ) {
 }(jQuery, _));
 
 myModule.publicMethod();
+
+// Revealing module pattern (Christian Heillmann)
+
+var myRealingModule = (function () {
+  var privateVar = "Ben Cherry", publicVar = "Hey there!";
+  function privateFunction() {
+    console.log("Name:" + privateVar);
+  }
+  function publicSetName(strName) {
+    privateVar = strName;
+  }
+  function publicGetName() {
+    privatFunction();
+  }
+  return {
+    setName: publicSetname,
+    greeting: publicVar,
+    getName: publicGetName
+  };
+}());
+
+myRevealingModule.setName("Paul Kinlan");
+
+// Christian Heillmann Revealing Pattern (Naming Conventions)
+
+var myRevealingModule = (fucntion () {
+  var privateCounter = 0;
+  function privateFunction() {
+    privateCounter++;
+  }
+  function publicFunction() {
+    publicIncrement();
+  }
+  function publicincrement() {
+    privateFunction();
+  }
+  function publicGetCount() {
+    return privateCounter;
+  }
+  // return reveals public pointers to private functions + properties
+  return {
+    start: publicFunction,
+    increment: publicIncrement,
+    counter: publicGetCount
+  }
+}());
