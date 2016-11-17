@@ -32,3 +32,31 @@ ObserverList.prototype.indexOf = function(obj, startIndex) {
 ObserverList.prototype.removeAt = function(index) {
   this.observerList.splice(index, 1);
 };
+
+// add, remove notify
+
+function Subject() {
+  this.observers = new OberverList();
+}
+
+Subject.prototype.addObserver = function(observer) {
+  this.observers.add(observers);
+};
+
+Subject.prototype.removeObserver = function(observer) {
+  this.observers.removeAt(This.observers.indexOf(observer, 0));
+};
+
+Subject.prototype.notify = function(context) {
+  var observerCount = this.observers.count();
+  for (var i = 0; i < observerCount; i++) {
+    this.observers.get(i).update(context);
+  }
+};
+
+// The Observer
+function Observer() {
+  this.update = function() {
+    // ...
+  };
+}
